@@ -15,17 +15,17 @@ const FinishedQuiz = props => {
     return (
         <div className={classes.FinishedQuiz}>
             <ul>
-                { props.quiz.map((QuizItem, index) => {
+                { props.quiz.map((quizItem, index) => {
                     const cls = [
                         'fa',
-                        props.results[QuizItem.id] === 'error' ? 'fa-times' : 'fa-check',
-                        classes[props.results[QuizItem.id]]
+                        props.results[quizItem.id] === 'error' ? 'fa-times' : 'fa-check',
+                        classes[props.results[quizItem.id]]
                     ]
 
                     return(
                         <li key={index}>
                             <strong>{index + 1}</strong>. &nbsp;
-                            {QuizItem.question}
+                            {quizItem.question}
                             <i className={cls.join(' ')}/>
                         </li>
                     )
@@ -36,7 +36,7 @@ const FinishedQuiz = props => {
             <div>
                 <Button onClick={ props.onRetry } type="primary">Повторить</Button>
                 <Link to="/">
-                    <Button onClick={ props.onRetry } type="success">Перейти в список тестов</Button>
+                    <Button type="success">Перейти в список тестов</Button>
                 </Link>
             </div>
         </div>
