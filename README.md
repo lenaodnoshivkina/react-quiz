@@ -1,3 +1,7 @@
+This project was created using the React and Redax libraries. This application is a platform for creating and passing tests.
+
+Users can register on the site, then the functionality depends on the user's role. The administrator gets access to create, edit and delete tests. An ordinary user can only take tests and see the statistics of the results.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
